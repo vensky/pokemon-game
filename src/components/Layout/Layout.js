@@ -2,16 +2,16 @@ import s from './style.module.css';
 
 const Layout = (id, title, descr, urlBg, colorBg) => {
     return (
-        <section class="root" id="">
-            <div class="wrapper">
+        <section className={s.root} id="">
+            <div className={s.wrapper}>
                 <article>
-                    <div class="title">
+                    <div className={s.title}>
                         <h3>
 
                         </h3>
-                        <span class="separator"></span>
+                        <span className={s.separator}></span>
                     </div>
-                    <div class="desc full">
+                    <div className={`${s.desc} ${s.full}`}>
                         <p>
 
                         </p>
