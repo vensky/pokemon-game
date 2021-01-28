@@ -4,8 +4,8 @@ const Layout = ({ id, title, desc, urlBg, colorBg }) => {
     const bgImgRoot = urlBg ? { backgroundImage: `url(${urlBg})` } : null;
     const bgColorRoot = colorBg ? { backgroundColor: `${colorBg}` } : null;
     return (
-        <section className={ s.root } id="" style={ bgImgRoot || bgColorRoot }>
-            <div className={ s.wrapper}>
+        <section className={s.root} id="" style={ bgImgRoot || bgColorRoot }>
+            <div className={s.wrapper}>
                 <article>
                     <div className={s.title}>
                         <h3>
