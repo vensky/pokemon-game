@@ -1,33 +1,34 @@
 import s from './style.module.css';
+import cardBackSide from './card-back-side.jpg';
 
-function PokemonCard() => {
+const PokemonCard = ({id, name, type, img, values}) => {
     return(
-        <div className="root">
-              <div className="pokemonСard">
-                <div className="cardFront">
-                    <div className="wrap front">
-                        <div className="pokemon <-- Type Pokemon -->">
-                            <div className="values">
-                                <div className="count top"><-- Count Value --></div>
-                                <div className="count right"><-- Count Value --></div>
-                                <div className="count bottom"><-- Count Value --></div>
-                                <div className="count left"><-- Count Value --></div>
+        <div className={s.root}>
+              <div className={s.pokemonCard}>
+                <div className={s.cardFront}>
+                    <div className={`${s.wrap} ${s.front}`}>
+                        <div className={`${s.pokemon} ${s[type]}`}>
+                            <div className={s.values}>
+                                <div className={`${s.count} ${s.top}`}>{values.top}</div>
+                                <div className={`${s.count} ${s.rigth}`}>{values.right}</div>
+                                <div className={`${s.count} ${s.bottom}`}>{values.bottom}</div>
+                                <div className={`${s.count} ${s.left}`}>{values.left}</div>
                             </div>
-                            <div className="imgContainer">
-                                <img src="<-- Pokemon Picture -->" alt="<-- Name Pokemon -->" />
+                            <div className={s.imgContainer}>
+                                <img src={img} alt={name} />
                             </div>
-                            <div className="info">
-                                <span className="number">#{<-- ID Pokemon -->}</span>
-                                <h3 className="name"><-- Name Pokemon --></h3>
-                                <small className="type">Type: <span><-- Type Pokemon --></span></small>
+                            <div className={s.info}>
+                                <span className={s.number}>#{id}</span>
+                                <h3 className={s.name}>{name}</h3>
+                                <small className={s.type}>Type: <span>{type}</span></small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="cardBack">
-                    <div className="wrap back">
-                        <img src="<-- Card Backed Picture -->" alt="Сard Backed" />
+                <div className={s.cardBack}>
+                    <div className={`${s.wrap} ${s.back}`}>
+                        <img src={cardBackSide} alt="Сard Backed" />
                     </div>
                 </div>
 
