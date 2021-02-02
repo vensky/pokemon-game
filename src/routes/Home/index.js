@@ -2,8 +2,9 @@ import Header from '../../components/Header';
 import Layout from '../../components/Layout';
 import Footer from '../../components/Footer';
 import PokemonCard from '../../components/PokemonCard';
+import MenuHeader from '../../components/MenuHeader';
 
-import layoutBg from './bg3.jpg';
+import layoutBg from '../../assets/bg3.jpg';
 import pokemons from '../../pokemons.json';
 
 import s from './style.module.css';
@@ -18,6 +19,7 @@ const HomePage = ({ onChangePage }) => {
 
     return (
         <>
+            <MenuHeader />
             <Header
                 title="Pokemon Game"
                 desc="This is simple triple triad card game"
