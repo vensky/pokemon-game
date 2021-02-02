@@ -6,7 +6,7 @@ import cardBackSide from './card-back-side.jpg';
 const PokemonCard = ({id, name, type, img, values}) => {
     const [isActive, setActive] = useState(false);
     const handleClick = () => {
-        setActive(true);
+        setActive(!isActive);
     }
     return(
         <div className={s.root} onClick={handleClick}>
