@@ -1,24 +1,32 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import s from './style.module.css';
-import cardBackSide from './card-back-side.jpg';
+import s from "./style.module.css";
+import cardBackSide from "./card-back-side.jpg";
 
-const PokemonCard = ({id, name, type, img, values}) => {
+const PokemonCard = ({ id, name, type, img, values }) => {
     const [isActive, setActive] = useState(false);
     const handleClick = () => {
         setActive(!isActive);
-    }
-    return(
+    };
+    return (
         <div className={s.root} onClick={handleClick}>
-              <div className={`${s.pokemonCard} ${isActive ? s.active : ''}`}>
+            <div className={`${s.pokemonCard} ${isActive ? s.active : ""}`}>
                 <div className={s.cardFront}>
                     <div className={`${s.wrap} ${s.front}`}>
                         <div className={`${s.pokemon} ${s[type]}`}>
                             <div className={s.values}>
-                                <div className={`${s.count} ${s.top}`}>{values.top}</div>
-                                <div className={`${s.count} ${s.rigth}`}>{values.right}</div>
-                                <div className={`${s.count} ${s.bottom}`}>{values.bottom}</div>
-                                <div className={`${s.count} ${s.left}`}>{values.left}</div>
+                                <div className={`${s.count} ${s.top}`}>
+                                    {values.top}
+                                </div>
+                                <div className={`${s.count} ${s.rigth}`}>
+                                    {values.right}
+                                </div>
+                                <div className={`${s.count} ${s.bottom}`}>
+                                    {values.bottom}
+                                </div>
+                                <div className={`${s.count} ${s.left}`}>
+                                    {values.left}
+                                </div>
                             </div>
                             <div className={s.imgContainer}>
                                 <img src={img} alt={name} />
@@ -26,7 +34,9 @@ const PokemonCard = ({id, name, type, img, values}) => {
                             <div className={s.info}>
                                 <span className={s.number}>#{id}</span>
                                 <h3 className={s.name}>{name}</h3>
-                                <small className={s.type}>Type: <span>{type}</span></small>
+                                <small className={s.type}>
+                                    Type: <span>{type}</span>
+                                </small>
                             </div>
                         </div>
                     </div>
@@ -37,10 +47,9 @@ const PokemonCard = ({id, name, type, img, values}) => {
                         <img src={cardBackSide} alt="Сard Backed" />
                     </div>
                 </div>
-
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default PokemonCard;
