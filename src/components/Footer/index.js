@@ -8,7 +8,7 @@ const Footer = () => {
                 <p>© 2021 #ReactMarathon.</p>
             </div>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;

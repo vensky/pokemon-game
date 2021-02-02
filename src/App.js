@@ -1,14 +1,14 @@
-import "./App.css";
+import './App.css';
 
-import Header from "./components/Header";
-import Layout from "./components/Layout";
-import Footer from "./components/Footer";
-import PokemonCard from "./components/PokemonCard";
+import Header from './components/Header';
+import Layout from './components/Layout';
+import Footer from './components/Footer';
+import PokemonCard from './components/PokemonCard';
 
-import layoutBg from "./assets/bg3.jpg";
-import pokemons from "./pokemons.json";
+import layoutBg from './assets/bg3.jpg';
+import pokemons from './pokemons.json';
 
-const COLOR_BG = "#202736";
+const COLOR_BG = '#202736';
 const POKEMONS = pokemons;
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
                 </p>
             </Layout>
             <Layout colorBg={COLOR_BG}>
-                <div className="flex">
+                <div className='flex'>
                     {POKEMONS.map((item, key) => (
                         <PokemonCard
                             key={item.id}
