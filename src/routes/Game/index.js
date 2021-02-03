@@ -7,7 +7,7 @@ const GamePage = ({ onChangePage }) => {
 
     return (
         <>
-            <div>This is Game Page!!!</div>
+            <h1>This is Game Page!!!</h1>
             <button onClick={handleClickButton}>Go to Home</button>
         </>
     );
