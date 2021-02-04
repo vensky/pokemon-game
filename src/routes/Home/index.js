@@ -1,27 +1,21 @@
-import Header from "../../components/Header";
-import Layout from "../../components/Layout";
-import PokemonCard from "../../components/PokemonCard";
-import MenuHeader from "../../components/MenuHeader";
+import Header from '../../components/Header';
+import Layout from '../../components/Layout';
+import PokemonCard from '../../components/PokemonCard';
 
-import layoutBg from "../../assets/bg3.jpg";
-import pokemons from "../../pokemons.json";
+import layoutBg from '../../assets/bg3.jpg';
+import pokemons from '../../pokemons.json';
 
-import s from "./style.module.css";
+import s from './style.module.css';
 
-const COLOR_BG = "#202736";
+const COLOR_BG = '#202736';
 const POKEMONS = pokemons;
 
-const HomePage = ({ onChangePage }) => {
-    const handleClickButton = (page) => {
-        onChangePage && onChangePage(page);
-    };
-
+const HomePage = () => {
     return (
         <>
             <Header
                 title="Pokemon Game"
                 desc="This is simple triple triad card game"
-                onClickButton={handleClickButton}
             />
             <Layout urlBg={layoutBg}>
                 <p>
