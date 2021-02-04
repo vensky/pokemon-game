@@ -32,21 +32,26 @@
     height: 22px;
     width: 30px;
     outline: none;
+
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .menuButton span,
 .menuButton span::before,
 .menuButton span::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 30px;
     height: 3px;
+    left: 0;
     background: #fafafa;
     transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .menuButton span {
-    position: relative;
     display: block;
     top: 50%;
     transform: translate(0, -50%);

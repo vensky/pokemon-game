@@ -1,23 +1,23 @@
-import cn from 'classnames';
+import cn from "classnames";
 
-import s from './style.module.css';
+import s from "./style.module.css";
 
 const MENU = [
     {
-        title: 'HOME',
-        to: '',
+        title: "HOME",
+        to: "\\",
     },
     {
-        title: 'GAME',
-        to: 'game',
+        title: "GAME",
+        to: "game",
     },
     {
-        title: 'ABOUT',
-        to: 'about',
+        title: "ABOUT",
+        to: "about",
     },
     {
-        title: 'CONTACT',
-        to: 'contact',
+        title: "CONTACT",
+        to: "contact",
     },
 ];
 
