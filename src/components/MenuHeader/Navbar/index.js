@@ -1,12 +1,15 @@
-import cn from "classnames";
+import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
-import s from "./style.module.css";
+import s from './style.module.css';
 
 const Navbar = ({ isOpen, bgActive = false, onClickMenu }) => {
     return (
         <nav className={cn(s.navbar, { [s.bgActive]: bgActive })}>
             <div className={s.navWrapper}>
-                <p className={s.brand}>POKEMON GAME</p>
+                <div className={s.brand}>
+                    <Link to="/">POKEMON GAME</Link>
+                </div>
                 <button
                     className={cn(s.menuButton, { [s.active]: isOpen })}
                     onClick={onClickMenu}

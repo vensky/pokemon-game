@@ -1,20 +1,21 @@
-import { useRouteMatch, Route, Switch } from "react-router-dom";
-import cn from "classnames";
+import { useRouteMatch, Route, Switch, Redirect } from 'react-router-dom';
+import cn from 'classnames';
 
-import MenuHeader from "./components/MenuHeader";
-import Footer from "./components/Footer";
-import HomePage from "./routes/Home";
-import GamePage from "./routes/Game";
-import AboutPage from "./routes/About";
-import ContactPage from "./routes/Contact";
+import MenuHeader from './components/MenuHeader';
+import Footer from './components/Footer';
+import HomePage from './routes/Home';
+import GamePage from './routes/Game';
+import AboutPage from './routes/About';
+import ContactPage from './routes/Contact';
 
-import s from "./style.module.css";
+import s from './style.module.css';
 
 const App = () => {
-    const match = useRouteMatch("/");
-    console.log(match.isExact);
+    const match = useRouteMatch('/');
+
     return (
         <Switch>
+            <Route path="/404" render={() => <h1>404 page not found</h1>} />
             <Route>
                 <>
                     <MenuHeader bgActive={!match.isExact} />
@@ -32,7 +33,7 @@ const App = () => {
                                 exact
                                 component={ContactPage}
                             />
-                            <Route render={() => <h1>404 page not found</h1>} />
+                            <Route render={() => <Redirect to="/404" />} />
                         </Switch>
                     </div>
                     <Footer />
