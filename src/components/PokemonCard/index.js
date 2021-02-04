@@ -3,18 +3,11 @@ import cn from 'classnames';
 import cardBackSide from './card-back-side.jpg';
 import s from './style.module.css';
 
-const PokemonCard = ({
-    id,
-    name,
-    type,
-    img,
-    values,
-    isActive,
-    handleClickCard,
-}) => {
+const PokemonCard = ({ id, name, type, img, values, isActive, handleClickCard }) => {
     const handleClick = () => {
         handleClickCard && handleClickCard(id);
     };
+
     return (
         <div className={s.root} onClick={handleClick}>
             <div className={cn(s.pokemonCard, { [s.active]: isActive })}>
