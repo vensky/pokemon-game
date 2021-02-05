@@ -14,8 +14,8 @@ const HomePage = () => {
     return (
         <>
             <Header
-                title="Pokemon Game"
-                desc="This is simple triple triad card game"
+                title='Pokemon Game'
+                desc='This is simple triple triad card game'
             />
             <Layout urlBg={layoutBg}>
                 <p>

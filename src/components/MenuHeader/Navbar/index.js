@@ -8,12 +8,12 @@ const Navbar = ({ isOpen, bgActive = false, onClickMenu }) => {
         <nav className={cn(s.navbar, { [s.bgActive]: bgActive })}>
             <div className={s.navWrapper}>
                 <div className={s.brand}>
-                    <Link to="/">POKEMON GAME</Link>
+                    <Link to='/'>POKEMON GAME</Link>
                 </div>
                 <button
                     className={cn(s.menuButton, { [s.active]: isOpen })}
                     onClick={onClickMenu}
-                    type="button"
+                    type='button'
                 >
                     <span />
                 </button>

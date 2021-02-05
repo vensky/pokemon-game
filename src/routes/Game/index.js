@@ -12,12 +12,14 @@ const GamePage = () => {
     const [pokemons, setPokemon] = useState(POKEMONS);
 
     const handleClickCard = (id) => {
-        setPokemon(pokemons.map((item) => {
-            if (item.id === id) {
-                item.active = !item.active;
-            }
-            return item;
-        }))
+        setPokemon(
+            pokemons.map((item) => {
+                if (item.id === id) {
+                    return { ...item, active: !item.active };
+                }
+                return { ...item };
+            })
+        );
     };
 
     return (

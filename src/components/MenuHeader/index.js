@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import Menu from "./Menu";
-import Navbar from "./Navbar";
+import Menu from './Menu';
+import Navbar from './Navbar';
 
 const MenuHeader = ({ bgActive }) => {
     const [isOpen, setOpen] = useState(null);

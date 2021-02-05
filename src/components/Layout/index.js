@@ -8,7 +8,7 @@ const Layout = ({ id, title, desc, urlBg, colorBg, children }) => {
     return (
         <section
             className={s.root}
-            id=""
+            id=''
             style={{ ...bgImgRoot, ...bgColorRoot }}
         >
             <div className={s.wrapper}>

@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <Switch>
-            <Route path="/404" render={() => <h1>404 page not found</h1>} />
+            <Route path='/404' render={() => <h1>404 page not found</h1>} />
             <Route>
                 <>
                     <MenuHeader bgActive={!match.isExact} />
@@ -25,15 +25,15 @@ const App = () => {
                         })}
                     >
                         <Switch>
-                            <Route path="/" exact component={HomePage} />
-                            <Route path="/game" exact component={GamePage} />
-                            <Route path="/about" exact component={AboutPage} />
+                            <Route path='/' exact component={HomePage} />
+                            <Route path='/game' exact component={GamePage} />
+                            <Route path='/about' exact component={AboutPage} />
                             <Route
-                                path="/contact"
+                                path='/contact'
                                 exact
                                 component={ContactPage}
                             />
-                            <Route render={() => <Redirect to="/404" />} />
+                            <Route render={() => <Redirect to='/404' />} />
                         </Switch>
                     </div>
                     <Footer />
